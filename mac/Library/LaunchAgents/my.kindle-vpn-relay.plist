@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"\>
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>my.kindle-vpn-relay</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string>
+    <string>-c</string>
+    <string>/opt/homebrew/bin/cloudflared access tcp --hostname my-kindle-ssh-subdomain.example.com --url 127.0.0.1:51821 &amp; exec /path/to/wg-relay-mac udp2tcp 127.0.0.1:51820 127.0.0.1:51821</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/tmp/kindle-vpn-relay.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/kindle-vpn-relay.log</string>
+</dict>
+</plist>
