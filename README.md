@@ -18,8 +18,8 @@ This project turns a jailbroken Kindle into a dedicated E-Ink display frame:
 ## Prerequisites
 
 * **Hardware:**
-  * Jailbroken 11th Gen Kindle (MT8110) with USBNet/Wi-Fi SSH access and `mntroot` available.
-  * FDM 3D printer (PLA filament) to print the enclosure `.stl` files.
+  * Jailbroken 11th Gen Kindle (MT8110) with USBNet/Wi-Fi SSH access and syncthing installed.
+  * 3D printer to print the `.stl` files.
 * **Host / Client (macOS):**
   * Go (`>= 1.21`)
   * `cloudflared` (`brew install cloudflared`)
